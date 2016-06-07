@@ -37,7 +37,7 @@
         android:text="Name"
         android:id="@+id/tvName"
         android:layout_marginTop="35dp"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/tvProfileSetup"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Profile Setup"
-        android:id="@+id/textView2"
+        android:id="@+id/tvProfileSetup"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -131,7 +131,7 @@
         android:ems="10"
         android:id="@+id/etFamilyName"
         android:layout_alignBottom="@+id/tvFamilyName"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_alignStart="@+id/tvProfileSetup" />
 
     <TextView
         android:layout_width="wrap_content"
