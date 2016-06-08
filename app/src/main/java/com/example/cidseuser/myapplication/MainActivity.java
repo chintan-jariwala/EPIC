@@ -8,50 +8,92 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+//import android.widget.TextView;
+//import android.app.*;
+//import android.widget.TextView;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
-public class MainActivity extends AppCompatActivity {
 
-    public void onCreateProfileSetUp()
+public class MainActivity extends AppCompatActivity
+{
+    //private TextView;
+    private EditText etName;
+    private EditText etPhone;
+    private EditText etAddress;
+    private EditText etCity;
+    private EditText etFamilyName;
+    private EditText etFamilyPhone;
+    private Button btnProfileInfoSubmit;
+
+    private void initializeVariables()
+    {
+        etName = (EditText) findViewById(R.id.etName);
+        etPhone = (EditText) findViewById(R.id.etPhone);
+        etAddress = (EditText) findViewById(R.id.etAddress);
+        etCity = (EditText) findViewById(R.id.etCity);
+        etFamilyName = (EditText)findViewById(R.id.etFamilyName);
+        etFamilyPhone = (EditText) findViewById(R.id.etFamilyPhone);
+        btnProfileInfoSubmit = (Button) findViewById(R.id.btnProfileInfoSubmit);
+    }
+    public void onSubmitProfileButton()
+    {
+        //TextView view;
+        //view = setText("Your Profile Info: \n" + etName.getText().toString()+ "\n"+ etPhone.getText().toString());
+
+        etName.getText();
+        etPhone.getText();
+        etAddress.getText();
+        etCity.getText();
+        etFamilyName.getText();
+        etFamilyPhone.getText();
+
+    }
+
+    public void displayProfileData()
     {
 
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        initializeVariables();
+
+
+        btnProfileInfoSubmit.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View view)
+            {
+                onSubmitProfileButton();
+
             }
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    /**
+     *
+     */
+    private void parseJsonFile()
+    {
+        String jsonString = readJsonFile();
+
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
-        return super.onOptionsItemSelected(item);
-    }
 }
