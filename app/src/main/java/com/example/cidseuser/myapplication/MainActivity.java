@@ -108,6 +108,11 @@ public class MainActivity extends AppCompatActivity
             {
                 onSubmitProfileButton();
                 etName.setText(null);
+                etPhone.setText(null);
+                etAddress.setText(null);
+                etCity.setText(null);
+                etFamilyName.setText(null);
+                etFamilyPhone.setText(null);
 
             }
 
