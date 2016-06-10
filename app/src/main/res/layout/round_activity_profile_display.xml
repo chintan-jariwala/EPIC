@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileDisplay"
+    tools:deviceIds="wear_round">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name: null"
+        android:id="@+id/tvName"
+        android:textSize="20dip"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Phone: null"
+        android:id="@+id/tvPhone"
+        android:layout_below="@+id/tvName"
+        android:layout_alignStart="@+id/tvName"
+        android:layout_marginTop="20dp"
+        android:textStyle="normal"
+        android:phoneNumber="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Address: null"
+        android:id="@+id/tvAddress"
+        android:layout_below="@+id/tvPhone"
+        android:layout_alignStart="@+id/tvPhone"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="City: null"
+        android:id="@+id/tvCity"
+        android:layout_below="@+id/tvAddress"
+        android:layout_alignStart="@+id/tvAddress" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Family Member"
+        android:id="@+id/tvFM"
+        android:textStyle="bold"
+        android:layout_below="@+id/tvCity"
+        android:layout_alignStart="@+id/tvCity"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Spouse: null"
+        android:id="@+id/tvFMName"
+        android:layout_below="@+id/tvFM"
+        android:layout_alignStart="@+id/tvFM" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Spouse Ph: null"
+        android:id="@+id/tvFMPhone"
+        android:layout_below="@+id/tvFMName"
+        android:layout_alignEnd="@+id/tvFM"
+        android:layout_alignStart="@+id/tvFMName" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgPhoto"
+        android:layout_alignTop="@+id/tvName"
+        android:layout_toStartOf="@+id/tvName"
+        android:layout_alignBottom="@+id/tvFMPhone"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/default_pic"
+        android:paddingRight="20dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="Calm Down"
+        android:id="@+id/btnCalmDown"
+        android:layout_marginTop="31dp"
+        android:textSize="24dip"
+        android:textStyle="bold"
+        android:layout_below="@+id/tvFMPhone"
+        android:padding="15dp"
+        android:backgroundTint="#84f78d"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="Family"
+        android:id="@+id/btnFamily"
+        android:textSize="24dip"
+        android:layout_alignTop="@+id/btnCalmDown"
+        android:layout_alignParentEnd="false"
+        android:layout_toRightOf="@+id/btnCalmDown"
+        android:textStyle="bold"
+        android:backgroundTint="#f1fc59"
+        android:clickable="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Edit Settings"
+        android:id="@+id/btnEdit"
+        android:textSize="10dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="Locator"
+        android:id="@+id/btnLocator"
+        android:layout_below="@+id/tvFMPhone"
+        android:layout_toStartOf="@+id/btnFamily"
+        android:layout_marginTop="125dp"
+        android:padding="15dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:backgroundTint="#71dff7"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="People"
+        android:id="@+id/button"
+        android:layout_toEndOf="@+id/btnLocator"
+        android:layout_alignTop="@+id/btnLocator"
+        android:layout_toRightOf="@+id/btnLocator"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:backgroundTint="#fda558"
+        android:clickable="true" />
+
+</RelativeLayout>
