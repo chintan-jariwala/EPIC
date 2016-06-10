@@ -12,7 +12,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Name: null"
         android:id="@+id/tvName"
-        android:textSize="20dip"
+        android:textSize="16dip"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -28,6 +28,7 @@
         android:layout_below="@+id/tvName"
         android:layout_alignStart="@+id/tvName"
         android:layout_marginTop="20dp"
+        android:textSize="12dip"
         android:textStyle="normal"
         android:phoneNumber="true" />
 
@@ -38,6 +39,7 @@
         android:text="Address: null"
         android:id="@+id/tvAddress"
         android:layout_below="@+id/tvPhone"
+        android:textSize="12dip"
         android:layout_alignStart="@+id/tvPhone"
         android:layout_marginTop="20dp" />
 
@@ -47,6 +49,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="City: null"
         android:id="@+id/tvCity"
+        android:textSize="12dip"
         android:layout_below="@+id/tvAddress"
         android:layout_alignStart="@+id/tvAddress" />
 
@@ -59,7 +62,7 @@
         android:textStyle="bold"
         android:layout_below="@+id/tvCity"
         android:layout_alignStart="@+id/tvCity"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,6 +70,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Spouse: null"
         android:id="@+id/tvFMName"
+        android:textSize="12dip"
         android:layout_below="@+id/tvFM"
         android:layout_alignStart="@+id/tvFM" />
 
@@ -76,6 +80,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Spouse Ph: null"
         android:id="@+id/tvFMPhone"
+        android:textSize="12dip"
         android:layout_below="@+id/tvFMName"
         android:layout_alignEnd="@+id/tvFM"
         android:layout_alignStart="@+id/tvFMName" />

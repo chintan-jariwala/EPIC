@@ -11,10 +11,9 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    public void onCreateProfileSetUp()
-    {
 
-    }
+    private final int SPLASH_DISPLAY_LENGHT = 1000;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
