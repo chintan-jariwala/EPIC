@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.cidseuser.myapplication.MainActivity">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/btnProfileInfoSubmit"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/etFamilyPhone"
+        android:layout_alignStart="@+id/etFamilyPhone" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Family Member Info"
+        android:id="@+id/tvFamilyInfo"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/tvAddress"
+        android:layout_below="@+id/etCity"
+        android:layout_marginTop="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name"
+        android:id="@+id/tvName"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/tvProfileSetup"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Profile Setup"
+        android:id="@+id/tvProfileSetup"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etName"
+        android:layout_alignBottom="@+id/tvName"
+        android:layout_alignStart="@+id/btnProfileInfoSubmit" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Phone "
+        android:id="@+id/tvPhone"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/tvName"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/etPhone"
+        android:layout_alignBottom="@+id/tvPhone"
+        android:layout_alignStart="@+id/etName" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Address"
+        android:id="@+id/tvAddress"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/tvPhone"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/etAddress"
+        android:layout_alignBottom="@+id/tvAddress"
+        android:layout_alignStart="@+id/etPhone" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="City &amp; State"
+        android:id="@+id/tvCity"
+        android:layout_below="@+id/tvAddress"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/etCity"
+        android:layout_alignTop="@+id/tvCity"
+        android:layout_alignStart="@+id/etAddress" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name"
+        android:id="@+id/tvFamilyName"
+        android:layout_below="@+id/tvFamilyInfo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etFamilyName"
+        android:layout_alignBottom="@+id/tvFamilyName"
+        android:layout_alignStart="@+id/tvProfileSetup" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Phone"
+        android:id="@+id/tvFamilyPhone"
+        android:layout_below="@+id/tvFamilyName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="34dp" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/etFamilyPhone"
+        android:layout_alignBottom="@+id/tvFamilyPhone"
+        android:layout_alignStart="@+id/etFamilyName" />
+</RelativeLayout>
