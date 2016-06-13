@@ -5,7 +5,10 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="title_activity_profile_display">profileDisplay</string>
+    <string name="title_activity_profile_data">Profile Data</string>
+    <string name="title_activity_profile_display">Profile Display</string>
     <string name="hello_round">Hello Round World!</string>
     <string name="hello_square">Hello Square World!</string>
+    <string name="title_activity_family_contacts">Additional Family Info</string>
+    <string name="title_activity_familyinfo">familyinfo</string>
 </resources>
