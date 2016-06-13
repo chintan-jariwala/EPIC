@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.cidseuser.myapplication.CallHelp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="For help, press a button to call"
+        android:id="@+id/tvInstructions"
+        android:layout_weight="0.03"
+        android:textAlignment="center"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textSize="24dp"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="175dp"
+        android:layout_height="150dp"
+        android:text="New Button"
+        android:id="@+id/btnFM1"
+        android:layout_weight="0.30"
+        android:layout_gravity="right"
+        android:layout_alignTop="@+id/btnFM2"
+        android:backgroundTint="#f9f340"
+        android:textSize="28dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="175dp"
+        android:layout_height="150dp"
+        android:text="New Button"
+        android:id="@+id/btnFM2"
+        android:backgroundTint="#54ef61"
+        android:textSize="28dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/tvInstructions"
+        android:layout_toEndOf="@+id/btnFM1"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="175dp"
+        android:layout_height="150dp"
+        android:text="New Button"
+        android:id="@+id/btnFM3"
+        android:layout_below="@+id/btnFM1"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/btnFM1"
+        android:backgroundTint="#e33e44"
+        android:textSize="28dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="175dp"
+        android:layout_height="150dp"
+        android:text="911"
+        android:id="@+id/btnEmerg"
+        android:layout_alignTop="@+id/btnFM3"
+        android:layout_alignStart="@+id/btnFM2"
+        android:layout_alignBottom="@+id/btnFM3"
+        android:layout_alignEnd="@+id/btnFM2"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:backgroundTint="#5a7ef5" />
+</RelativeLayout>

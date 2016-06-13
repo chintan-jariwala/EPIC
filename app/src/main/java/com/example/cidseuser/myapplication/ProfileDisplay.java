@@ -1,24 +1,31 @@
 package com.example.cidseuser.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class ProfileDisplay extends AppCompatActivity {
+public class ProfileDisplay extends AppCompatActivity
+{
 
+    private Button btnHelp;
+    private Button btnCalmDown;
+    private Button btnLocator;
     private TextView mTextView;
+
     // UI References
     public   String myPreference = "myPref";
     private SharedPreferences sharedPreference;
 
     Activity context = this;
 
-
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.round_activity_profile_display);
 
@@ -44,5 +51,45 @@ public class ProfileDisplay extends AppCompatActivity {
         TextView familyPhoneTextView = (TextView)findViewById(R.id.tvFMPhone);
         familyPhoneTextView.setText(familyPhone);
 
+        btnHelp = (Button)findViewById(R.id.btnHelp);
+        btnCalmDown = (Button)findViewById(R.id.btnCalmDown);
+        btnLocator = (Button)findViewById(R.id.btnLocator);
+
+        btnHelp.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent;
+                intent = new Intent(getApplicationContext(), CallHelp.class);
+                intent.putExtra("Test", "data...");
+                startActivity(intent);
+            }
+        });
+
+        btnCalmDown.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent;
+               // intent = new Intent(getApplicationContext(), CalmDown.class);
+               // intent.putExtra("Test", "data...");
+               // startActivity(intent);
+            }
+        });
+
+        btnLocator.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent;
+                // intent = new Intent(getApplicationContext(), GPSLocator.class);
+                // intent.putExtra("Test", "data...");
+                // startActivity(intent);
+            }
+        });
     }
 }
+

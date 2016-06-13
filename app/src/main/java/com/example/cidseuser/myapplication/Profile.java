@@ -79,8 +79,6 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-
-
         initializeVariables();
 
         btnProfileInfoSubmit.setOnClickListener(new View.OnClickListener()
