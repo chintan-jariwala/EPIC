@@ -1,34 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.cidseuser.myapplication.calmDown">
+    tools:context=".CalmDown">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_calm_down" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    <Button
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+        android:text="MENU"
+        android:id="@+id/backToMenu" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ViewFlipper
+            android:id= "@+id/backgroundViewFlipper1"
+            android:layout_width= "fill_parent"
+            android:layout_height= 'fill_parent'>
+
+            <ImageView
+                android:id= "@+id/img8"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic1" />
+
+            <ImageView
+                android:id= "@+id/img10"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic10" />
+
+            <ImageView
+                android:id= "@+id/img9"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic9" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic2"
+                android:id="@+id/img7" />
+
+            <ImageView
+                android:id= "@+id/img6"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic3" />
+
+            <ImageView
+                android:id= "@+id/img5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic4" />
+
+            <ImageView
+                android:id= "@+id/img4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic5" />
+
+            <ImageView
+                android:id= "@+id/img3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic6" />
+
+            <ImageView
+                android:id= "@+id/img2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic7" />
+
+            <ImageView
+                android:id= "@+id/img1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic8" />
+
+
+        </ViewFlipper>
+    </LinearLayout>
+
+</RelativeLayout>
