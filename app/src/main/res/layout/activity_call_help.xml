@@ -21,7 +21,7 @@
         android:layout_marginTop="20dp" />
 
     <Button
-        android:layout_width="175dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="New Button"
         android:id="@+id/btnFM1"
@@ -30,10 +30,11 @@
         android:layout_alignTop="@+id/btnFM2"
         android:backgroundTint="#f9f340"
         android:textSize="28dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentEnd="false" />
 
     <Button
-        android:layout_width="175dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="New Button"
         android:id="@+id/btnFM2"
@@ -45,7 +46,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:layout_width="175dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="New Button"
         android:id="@+id/btnFM3"
@@ -57,7 +58,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:layout_width="175dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="911"
         android:id="@+id/btnEmerg"

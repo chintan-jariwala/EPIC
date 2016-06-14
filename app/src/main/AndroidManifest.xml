@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".CalmDown"
+            android:name=".MainActivity"
             android:label="Calm Down"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -24,6 +24,8 @@
             android:name=".ProfileDisplay"
             android:label="@string/app_name" />
         <activity android:name=".CallHelp" />
+        <activity android:name=".Profile" />
+        <activity android:name=".FamilyContacts" />
         <activity android:name=".CameraForEpic" />
     </application>
     <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>

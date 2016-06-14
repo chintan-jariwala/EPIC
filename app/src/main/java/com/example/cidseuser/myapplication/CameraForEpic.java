@@ -21,6 +21,11 @@ public class CameraForEpic extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_for_epic);
 
+        Intent intent;
+        intent =  new Intent(getApplicationContext(), Profile.class);
+        intent.putExtra("Test", "data...");
+        startActivity(intent);
+
     }
 
 

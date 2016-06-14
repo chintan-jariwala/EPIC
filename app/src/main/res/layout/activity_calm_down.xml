@@ -8,12 +8,25 @@
     android:fitsSystemWindows="true"
     tools:context=".CalmDown">
 
+
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="MENU"
-        android:id="@+id/backToMenu" />
+        android:text="RETURN"
+        android:id="@+id/btnReturn"
+        android:textStyle="bold"
+        android:backgroundTint="#bfbfbf" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Change Song"
+        android:id="@+id/btnChangeSong"
+        android:layout_alignBottom="@+id/btnReturn"
+        android:layout_toRightOf="@+id/btnReturn"
+        android:textStyle="bold"
+        android:backgroundTint="#dad4d4" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -93,6 +106,12 @@
                 android:layout_height="fill_parent"
                 android:scaleType="centerCrop"
                 android:src= "@drawable/pic8" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/button6" />
 
 
         </ViewFlipper>

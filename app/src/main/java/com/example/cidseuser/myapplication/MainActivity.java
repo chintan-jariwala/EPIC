@@ -1,6 +1,7 @@
 package com.example.cidseuser.myapplication;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -10,7 +11,7 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity
 {
-
+    public   String myPreference = "myFamilyPref";
     private final int SPLASH_DISPLAY_LENGTH = 3000;
     //ImageView image;
 
@@ -24,8 +25,32 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void run()
             {
-                Intent i =  new Intent(MainActivity.this, Profile.class);
-                startActivity(i);
+                SharedPreferences myStartScreenPref;
+                myStartScreenPref= getSharedPreferences(myPreference, 0);
+
+                boolean setUp = myStartScreenPref.getBoolean("isSetUpDone", false);
+
+                /*if(setUp)
+                {
+                    Intent i = new Intent(MainActivity.this, ProfileDisplay.class);
+                    startActivity(i);
+                }
+                else
+                {
+                    Intent i = new Intent(MainActivity.this, Profile.class);
+                    startActivity(i);
+                }*/
+
+                if(setUp)
+                {
+                    Intent i = new Intent(MainActivity.this, ProfileDisplay.class);
+                    startActivity(i);
+                }
+                else
+                {
+                    Intent i = new Intent(MainActivity.this, CameraForEpic.class);
+                    startActivity(i);
+                }
 
                 finish();
 

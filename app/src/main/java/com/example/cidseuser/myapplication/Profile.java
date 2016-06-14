@@ -68,16 +68,14 @@ public class Profile extends AppCompatActivity {
 
     }
 
-    public void displayProfileData()
-    {
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+
 
         initializeVariables();
 
