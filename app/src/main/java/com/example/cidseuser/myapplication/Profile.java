@@ -95,9 +95,12 @@ public class Profile extends AppCompatActivity {
                 etFamilyPhone.setText(null);
 
                 Intent intent;
-                intent = new Intent(getApplicationContext(),ProfileDisplay.class);
-                intent.putExtra("Test","data...");
+                intent =  new Intent(getApplicationContext(), FamilyContacts.class);
+                intent.putExtra("Test", "data...");
                 startActivity(intent);
+                //intent = new Intent(getApplicationContext(),ProfileDisplay.class);
+                //intent.putExtra("Test","data...");
+                //startActivity(intent);
             }
 
 
