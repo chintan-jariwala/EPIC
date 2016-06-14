@@ -152,6 +152,7 @@
         android:layout_alignBottom="@+id/tvFamilyPhone"
         android:layout_alignStart="@+id/etFamilyName" />
 
+<<<<<<< HEAD
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -172,4 +173,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView4" />
 
+=======
+>>>>>>> remotes/origin/slidshow
 </RelativeLayout>
