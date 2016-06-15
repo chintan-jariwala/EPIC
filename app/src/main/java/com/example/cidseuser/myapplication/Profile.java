@@ -36,7 +36,7 @@ public class Profile extends AppCompatActivity {
         etPhone = (EditText) findViewById(R.id.etPhone);
         etAddress = (EditText) findViewById(R.id.etAddress);
         etCity = (EditText) findViewById(R.id.etCity);
-        etFamilyName = (EditText)findViewById(R.id.etFamilyName);
+        etFamilyName = (EditText) findViewById(R.id.etFamilyName);
         etFamilyPhone = (EditText) findViewById(R.id.etFamilyPhone);
         btnProfileInfoSubmit = (Button) findViewById(R.id.btnProfileInfoSubmit);
     }

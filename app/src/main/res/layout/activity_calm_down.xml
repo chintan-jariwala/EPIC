@@ -10,14 +10,18 @@
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="MENU"
-        android:id="@+id/backToMenu" />
+        android:text="RETURN"
+        android:id="@+id/btnReturn"
+        android:textStyle="bold"
+        android:backgroundTint="#54b8fc" />
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/btnReturn">
 
         <ViewFlipper
             android:id= "@+id/backgroundViewFlipper1"
@@ -94,8 +98,25 @@
                 android:scaleType="centerCrop"
                 android:src= "@drawable/pic8" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/button6" />
+
 
         </ViewFlipper>
     </LinearLayout>
 
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Change Song"
+        android:id="@+id/btnChangeSong"
+        android:layout_alignBottom="@+id/btnReturn"
+        android:layout_toRightOf="@+id/btnReturn"
+        android:textStyle="bold"
+        android:backgroundTint="#97f54b" />
+
 </RelativeLayout>
+

@@ -1,22 +1,18 @@
 package com.example.cidseuser.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ViewFlipper;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.os.Build;
 
 public class CalmDown extends AppCompatActivity
 {
+    private Button btnReturn;
     Animation fade_in, fade_out;
     ViewFlipper viewFlipper;
 
@@ -27,6 +23,7 @@ public class CalmDown extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calm_down);
         viewFlipper = (ViewFlipper) this.findViewById(R.id.backgroundViewFlipper1);
+        btnReturn = (Button)findViewById(R.id.btnReturn);
 
         fade_in = AnimationUtils.loadAnimation(this, R.anim.fade_in);
         fade_out = AnimationUtils.loadAnimation(this, R.anim.fade_in);
@@ -42,9 +39,25 @@ public class CalmDown extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        btnReturn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
 
+                Intent intent;
+                intent = new Intent(getApplicationContext(), ProfileDisplay.class);
+                intent.putExtra("Test", "data...");
+                startActivity(intent);
+            }
+        });
     }
 
 
 
+
+
+
+
 }
+
