@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".CalmDown">
+    android:id="@+id/calmScreen">
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -15,7 +15,13 @@
         android:text="MENU"
         android:id="@+id/backToMenu" />
 
-    <LinearLayout
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT SONG"
+        android:id="@+id/NextSongButton" />
+
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
@@ -30,13 +36,6 @@
                 android:layout_height="fill_parent"
                 android:scaleType="centerCrop"
                 android:src= "@drawable/pic1" />
-
-            <ImageView
-                android:id= "@+id/img10"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scaleType="centerCrop"
-                android:src= "@drawable/pic10" />
 
             <ImageView
                 android:id= "@+id/img9"
@@ -94,8 +93,15 @@
                 android:scaleType="centerCrop"
                 android:src= "@drawable/pic8" />
 
+            <ImageView
+                android:id= "@+id/img10"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic10" />
+
 
         </ViewFlipper>
-    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
