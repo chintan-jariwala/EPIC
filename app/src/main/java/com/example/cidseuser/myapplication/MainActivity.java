@@ -11,7 +11,7 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity
 {
-    public   String myPreference = "myFamilyPref";
+    public String myPreference = "myPref";
     private final int SPLASH_DISPLAY_LENGTH = 3000;
     //ImageView image;
 
@@ -30,16 +30,16 @@ public class MainActivity extends AppCompatActivity
 
                 boolean setUp = myStartScreenPref.getBoolean("isSetUpDone", false);
 
-                /*if(setUp)
-                {
-                    Intent i = new Intent(MainActivity.this, ProfileDisplay.class);
-                    startActivity(i);
-                }
-                else
-                {
-                    Intent i = new Intent(MainActivity.this, Profile.class);
-                    startActivity(i);
-                }*/
+//                if(setUp)
+//                {
+//                    Intent i = new Intent(MainActivity.this, ProfileDisplay.class);
+//                    startActivity(i);
+//                }
+//                else
+//                {
+//                    Intent i = new Intent(MainActivity.this, Profile.class);
+//                    startActivity(i);
+//                }
 
                 if(setUp)
                 {

@@ -3,11 +3,18 @@ package com.example.cidseuser.myapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.File;
 
 public class ProfileDisplay extends AppCompatActivity
 {
@@ -16,6 +23,7 @@ public class ProfileDisplay extends AppCompatActivity
     private Button btnCalmDown;
     private Button btnLocator;
     private TextView mTextView;
+    private ImageView imgPhoto;
 
     // UI References
     public   String myPreference = "myPref";
@@ -37,6 +45,10 @@ public class ProfileDisplay extends AppCompatActivity
         String city = mSettings.getString("etCity", "CITY: NULL");
         String familyName = mSettings.getString("etFamilyName", "FAMILY: NULL");
         String familyPhone = mSettings.getString("etFamilyPhone", "PHONE: NULL");
+
+
+
+
 
         TextView nameTextView = (TextView)findViewById(R.id.tvName);
         nameTextView.setText(name);
@@ -73,9 +85,9 @@ public class ProfileDisplay extends AppCompatActivity
             public void onClick(View view) {
 
                 Intent intent;
-               // intent = new Intent(getApplicationContext(), CalmDown.class);
-               // intent.putExtra("Test", "data...");
-               // startActivity(intent);
+                intent = new Intent(getApplicationContext(), CalmDown.class);
+                intent.putExtra("Test", "data...");
+                startActivity(intent);
             }
         });
 
@@ -92,4 +104,5 @@ public class ProfileDisplay extends AppCompatActivity
         });
     }
 }
+
 

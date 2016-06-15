@@ -1,67 +1,71 @@
 package com.example.cidseuser.myapplication;
 
+
+import android.content.ContentValues;
 import android.content.Intent;
+
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+
+import java.io.File;
+
+import java.io.InputStream;
+import java.net.URL;
 
 /**
  * Created by cidseuser on 6/14/2016.
  */
-public class CameraForEpic extends AppCompatActivity {
+public class CameraForEpic extends AppCompatActivity
+{
+   // SharedPreferences sharedPreferences;
+    //public String myPreference = "myPref";
+    //public String isPicDone = "isPicDone";
+    //public String perPic = "person Pic";
+    private ImageView imageView;
 
-    static final int REQUEST_IMAGE_CAPTURE = 1;
+    private static final int CAMERA_REQUEST = 1888;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_for_epic);
-
-        Intent intent;
-        intent =  new Intent(getApplicationContext(), Profile.class);
-        intent.putExtra("Test", "data...");
-        startActivity(intent);
-
+        this.imageView = (ImageView)this.findViewById(R.id.imageView2);
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void dispatchTakePictureIntent() {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-        }
-    }
 
     public void buttonOnClick (View v)
     {
-        dispatchTakePictureIntent();
+        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(cameraIntent, CAMERA_REQUEST);
     }
+
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
+            Bitmap photo = (Bitmap) intent.getExtras().get("data");
+            imageView.setImageBitmap(photo);
+
+            //SharedPreferences shared = getSharedPreferences("App_settings", MODE_PRIVATE);
+           // SharedPreferences.Editor editor = shared.edit();
+            //editor.putString("PRODUCT_PHOTO",photo );
+           // editor.commit();
+        }
+    }
+
 
 
 }

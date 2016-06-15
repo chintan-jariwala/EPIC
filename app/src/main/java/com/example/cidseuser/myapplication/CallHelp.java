@@ -26,9 +26,9 @@ public class CallHelp extends AppCompatActivity {
 
     // UI References
     public   String myPreference = "myPref";
-    private SharedPreferences sharedPreference;
+    //private SharedPreferences sharedPreference;
 
-    Activity context = this;
+   // Activity context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public class CallHelp extends AppCompatActivity {
         btnFM2.setText(name1);
         Button btnFM3 = (Button) findViewById(R.id.btnFM3);
         btnFM3.setText(name2);
-
+        Button btnEmerg = (Button)findViewById(R.id.btnEmerg);
 
         btnFM1.setOnClickListener(new View.OnClickListener() {
             @Override

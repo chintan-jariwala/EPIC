@@ -1,34 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".CalmDown">
-
+    android:id="@+id/calmScreen">
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RETURN"
-        android:id="@+id/btnReturn"
-        android:textStyle="bold"
-        android:backgroundTint="#bfbfbf" />
+        android:text="MENU"
+        android:id="@+id/backToMenu" />
 
     <Button
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change Song"
-        android:id="@+id/btnChangeSong"
-        android:layout_alignBottom="@+id/btnReturn"
-        android:layout_toRightOf="@+id/btnReturn"
-        android:textStyle="bold"
-        android:backgroundTint="#dad4d4" />
+        android:text="NEXT SONG"
+        android:id="@+id/NextSongButton" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
@@ -43,13 +34,6 @@
                 android:layout_height="fill_parent"
                 android:scaleType="centerCrop"
                 android:src= "@drawable/pic1" />
-
-            <ImageView
-                android:id= "@+id/img10"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scaleType="centerCrop"
-                android:src= "@drawable/pic10" />
 
             <ImageView
                 android:id= "@+id/img9"
@@ -107,14 +91,15 @@
                 android:scaleType="centerCrop"
                 android:src= "@drawable/pic8" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button6" />
+            <ImageView
+                android:id= "@+id/img10"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src= "@drawable/pic10" />
 
 
         </ViewFlipper>
-    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

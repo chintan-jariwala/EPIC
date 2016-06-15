@@ -2,12 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cidseuser.myapplication">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera"></uses-feature>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
 
         <activity
             android:name=".MainActivity"
@@ -27,6 +31,8 @@
         <activity android:name=".Profile" />
         <activity android:name=".FamilyContacts" />
         <activity android:name=".CameraForEpic" />
+        <activity android:name=".CalmDown" />
+
     </application>
     <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
 

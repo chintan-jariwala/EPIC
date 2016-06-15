@@ -13,7 +13,7 @@ public class FamilyContacts extends AppCompatActivity
 {
 
     SharedPreferences sharedPreferences;
-    public String myFamilyPreference = "myFamilyPref";
+    public String myFamilyPreference = "myPref";
     public String name1 = "name1Key";
     public String name2 = "name2Key";
     public String phone1 ="phone1Key";

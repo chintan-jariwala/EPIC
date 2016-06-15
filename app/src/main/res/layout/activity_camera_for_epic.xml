@@ -22,16 +22,16 @@
 
     <Button
         android:layout_width="200dp"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:text="Take Picture"
         android:id="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="41dp"
         android:onClick="buttonOnClick"
         android:textSize="32dp"
         android:textStyle="bold"
-        android:backgroundTint="#7cf055" />
+        android:backgroundTint="#7cf055"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,4 +45,12 @@
         android:layout_alignEnd="@+id/textView"
         android:textSize="24dp"
         android:textAlignment="center" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="20dp" />
 </RelativeLayout>
