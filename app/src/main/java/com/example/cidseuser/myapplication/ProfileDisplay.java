@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,6 +26,7 @@ public class ProfileDisplay extends AppCompatActivity
     private Button btnLocator;
     private TextView mTextView;
     private ImageView imgPhoto;
+    private Button btnEdit;
 
     // UI References
     public   String myPreference = "myPref";
@@ -45,7 +48,7 @@ public class ProfileDisplay extends AppCompatActivity
         String city = mSettings.getString("etCity", "CITY: NULL");
         String familyName = mSettings.getString("etFamilyName", "FAMILY: NULL");
         String familyPhone = mSettings.getString("etFamilyPhone", "PHONE: NULL");
-
+        String encodedImage = mSettings.getString("image",null);
 
 
 
@@ -66,6 +69,16 @@ public class ProfileDisplay extends AppCompatActivity
         btnHelp = (Button)findViewById(R.id.btnHelp);
         btnCalmDown = (Button)findViewById(R.id.btnCalmDown);
         btnLocator = (Button)findViewById(R.id.btnLocator);
+        btnEdit= (Button) findViewById(R.id.btnEdit);
+
+        imgPhoto = (ImageView) findViewById(R.id.imgPhoto);
+
+        byte[] imageAsBytes = Base64.decode(encodedImage,Base64.DEFAULT);
+
+
+//        Intent i = getIntent();
+//        Bitmap image = i.getParcelableExtra("image");
+        imgPhoto.setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length));
 
         btnHelp.setOnClickListener(new View.OnClickListener()
         {
@@ -85,8 +98,20 @@ public class ProfileDisplay extends AppCompatActivity
             public void onClick(View view) {
 
                 Intent intent;
-                intent = new Intent(getApplicationContext(), CalmDown.class);
+                intent = new Intent(getApplicationContext(), PicSlides.class);
                 intent.putExtra("Test", "data...");
+                startActivity(intent);
+            }
+        });
+
+        btnEdit.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent;
+                intent = new Intent(getApplicationContext(), Profile.class);
+                //intent.putExtra("Test", "data...");
                 startActivity(intent);
             }
         });
@@ -96,7 +121,7 @@ public class ProfileDisplay extends AppCompatActivity
             @Override
             public void onClick(View view) {
 
-                Intent intent;
+                //Intent intent;
                 // intent = new Intent(getApplicationContext(), GPSLocator.class);
                 // intent.putExtra("Test", "data...");
                 // startActivity(intent);

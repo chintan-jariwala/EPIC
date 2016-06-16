@@ -20,6 +20,7 @@ public class CallHelp extends AppCompatActivity {
     private Button btnFM2;
     private Button btnFM3;
     private Button btnEmerg;
+    private Button btnReturn;
     public String fPhone1;
     public String fPhone2;
     public String fPhone3;
@@ -51,6 +52,7 @@ public class CallHelp extends AppCompatActivity {
         Button btnFM3 = (Button) findViewById(R.id.btnFM3);
         btnFM3.setText(name2);
         Button btnEmerg = (Button)findViewById(R.id.btnEmerg);
+        Button btnReturn= (Button) findViewById(R.id.btnReturn);
 
         btnFM1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +94,18 @@ public class CallHelp extends AppCompatActivity {
                 String url = "tel:+911";
                 Intent intent = new Intent(Intent.ACTION_DIAL , Uri.parse(url));
                 //check permission
+                startActivity(intent);
+            }
+        });
+
+        btnReturn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent;
+                intent = new Intent(getApplicationContext(), ProfileDisplay.class);
+                //intent.putExtra("Test", "data...");
                 startActivity(intent);
             }
         });

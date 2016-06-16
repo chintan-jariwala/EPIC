@@ -13,7 +13,8 @@ public class FamilyContacts extends AppCompatActivity
 {
 
     SharedPreferences sharedPreferences;
-    public String myFamilyPreference = "myPref";
+    //public String myFamilyPreference = "myPref";
+    public String myPreference = "myPref";
     public String name1 = "name1Key";
     public String name2 = "name2Key";
     public String phone1 ="phone1Key";
@@ -38,6 +39,25 @@ public class FamilyContacts extends AppCompatActivity
         etPhone2 = (EditText) findViewById(R.id.etPhone2);
         btnAdditionalFamilyInfoSubmit = (Button) findViewById(R.id.btnAdditionalFamilyInfoSubmit);
 
+        sharedPreferences = getSharedPreferences(myPreference, 0);
+
+        if(sharedPreferences.getString("etName1",null) != null)
+        {
+            etName1.setText(sharedPreferences.getString("etName1",null));
+        }
+        if(sharedPreferences.getString("etPhone1",null) != null)
+        {
+            etPhone1.setText(sharedPreferences.getString("etPhone1",null));
+        }
+        if(sharedPreferences.getString("etName2",null) != null)
+        {
+            etName2.setText(sharedPreferences.getString("etName2",null));
+        }
+        if(sharedPreferences.getString("etPhone2",null) != null)
+        {
+            etPhone2.setText(sharedPreferences.getString("etPhone2",null));
+        }
+
     }
 
     public void onSubmitFamilyInfoButton()
@@ -48,7 +68,7 @@ public class FamilyContacts extends AppCompatActivity
         phone2 = etPhone2.getText().toString();
 
         Toast.makeText(this,name1, Toast.LENGTH_LONG).show();
-        sharedPreferences = getSharedPreferences(myFamilyPreference, 0);
+        sharedPreferences = getSharedPreferences(myPreference, 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         editor.putString("etName1", name1);
@@ -83,11 +103,17 @@ public class FamilyContacts extends AppCompatActivity
                 etPhone2.setText(null);
 
 
-
                 Intent intent;
-                intent =  new Intent(getApplicationContext(), ProfileDisplay.class);
+                intent =  new Intent(getApplicationContext(), CameraForEpic.class);
                 intent.putExtra("Test", "data...");
                 startActivity(intent);
+
+
+
+                /*Intent intent;
+                intent =  new Intent(getApplicationContext(), ProfileDisplay.class);
+                intent.putExtra("Test", "data...");
+                startActivity(intent);*/
 
             }
 

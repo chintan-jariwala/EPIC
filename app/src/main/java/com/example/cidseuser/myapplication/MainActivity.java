@@ -30,18 +30,18 @@ public class MainActivity extends AppCompatActivity
 
                 boolean setUp = myStartScreenPref.getBoolean("isSetUpDone", false);
 
-//                if(setUp)
-//                {
-//                    Intent i = new Intent(MainActivity.this, ProfileDisplay.class);
-//                    startActivity(i);
-//                }
-//                else
-//                {
-//                    Intent i = new Intent(MainActivity.this, Profile.class);
-//                    startActivity(i);
-//                }
-
                 if(setUp)
+                {
+                    Intent i = new Intent(MainActivity.this, ProfileDisplay.class);
+                    startActivity(i);
+                }
+                else
+                {
+                    Intent i = new Intent(MainActivity.this, Profile.class);
+                    startActivity(i);
+                }
+
+                /*if(setUp)
                 {
                     Intent i = new Intent(MainActivity.this, ProfileDisplay.class);
                     startActivity(i);
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity
                 {
                     Intent i = new Intent(MainActivity.this, CameraForEpic.class);
                     startActivity(i);
-                }
+                }*/
 
                 finish();
 

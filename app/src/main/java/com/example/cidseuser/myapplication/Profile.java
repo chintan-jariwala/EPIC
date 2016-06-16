@@ -8,18 +8,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Profile extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
-    public   String myPreference = "myPref";
-    public   String name = "nameKey";
-    public   String phone = "phoneKey";
-    public  String address ="addressKey";
-    public   String city ="cityKey";
-    public   String familyName ="familyNameKey";
-    public  String familyPhone ="familyPhoneKey";
+    SharedPreferences.Editor editor;
+    public String myPreference = "myPref";
+    public String name = "nameKey";
+    public String phone = "phoneKey";
+    public String address ="addressKey";
+    public String city ="cityKey";
+    public String familyName ="familyNameKey";
+    public String familyPhone ="familyPhoneKey";
 
     //private TextView;
     private EditText etName;
@@ -29,7 +31,6 @@ public class Profile extends AppCompatActivity {
     private EditText etFamilyName;
     private EditText etFamilyPhone;
     private Button btnProfileInfoSubmit;
-
     private void initializeVariables()
     {
         etName = (EditText) findViewById(R.id.etName);
@@ -39,6 +40,35 @@ public class Profile extends AppCompatActivity {
         etFamilyName = (EditText)findViewById(R.id.etFamilyName);
         etFamilyPhone = (EditText) findViewById(R.id.etFamilyPhone);
         btnProfileInfoSubmit = (Button) findViewById(R.id.btnProfileInfoSubmit);
+
+        sharedPreferences = getSharedPreferences(myPreference, 0);
+
+
+        if(sharedPreferences.getString("etName",null) != null)
+        {
+            etName.setText(sharedPreferences.getString("etName",null));
+        }
+        if(sharedPreferences.getString("etPhone",null) != null)
+        {
+            etPhone.setText(sharedPreferences.getString("etPhone",null));
+        }
+        if(sharedPreferences.getString("etAddress",null) != null)
+        {
+            etAddress.setText(sharedPreferences.getString("etAddress",null));
+        }
+        if(sharedPreferences.getString("etCity",null) != null)
+        {
+            etCity.setText(sharedPreferences.getString("etCity",null));
+        }
+        if(sharedPreferences.getString("etFamilyName",null) != null)
+        {
+            etFamilyName.setText(sharedPreferences.getString("etFamilyName",null));
+        }
+        if(sharedPreferences.getString("etFamilyPhone",null) != null)
+        {
+            etFamilyPhone.setText(sharedPreferences.getString("etFamilyPhone",null));
+        }
+
     }
     public void onSubmitProfileButton()
     {
@@ -53,8 +83,8 @@ public class Profile extends AppCompatActivity {
         familyPhone = etFamilyPhone.getText().toString();
 
         Toast.makeText(this,name,Toast.LENGTH_LONG).show();
-        sharedPreferences = getSharedPreferences(myPreference, 0);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor = sharedPreferences.edit();
         editor.putString("etName", name);
         editor.putString("etPhone", phone);
         editor.putString("etAddress", address);

@@ -4,18 +4,21 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-feature android:name="android.hardware.camera"></uses-feature>
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:largeHeap="true">
-
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="Calm Down"
+            android:label="EPIC"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ProfileDisplay"
             android:label="@string/app_name" />
@@ -31,9 +33,7 @@
         <activity android:name=".Profile" />
         <activity android:name=".FamilyContacts" />
         <activity android:name=".CameraForEpic" />
-        <activity android:name=".CalmDown" />
-
+        <activity android:name=".PicSlides"></activity>
     </application>
-    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
 
 </manifest>
